@@ -8,3 +8,14 @@ function addTask() {
     if (taskText === "") {
         alert("Ju lutem shkruani një detyrë!");
         return;
+        }
+
+    const li = document.createElement('li');
+    
+    li.innerHTML = `
+        <span>${taskText}</span>
+        <button class="delete-btn">Fshij</button>
+    `;
+
+    const deleteBtn = li.querySelector('.delete-btn');
+    deleteBtn.oncl
