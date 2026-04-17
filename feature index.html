@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="feature style.css">
+    <title>Task Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Task Manager</h1>
-    <div class="input-section">
-        <input type="text" id="Taskinput" placeholder="Shto detyre te re...">
-    <buttton id="addBtn">Shto</buttton>
-    </div>
+        
+        <div class="stats-container">
+            <p>Detyra gjithsej: <span id="totalTasks">0</span></p>
+            <p>Të përfunduara: <span id="completedTasks">0</span></p>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Shto detyrë të re...">
+            <button id="addBtn">Shto</button>
+        </div>
+
         <ul id="taskList"></ul>
+
+        <div class="footer-actions">
+            <button id="clearAllBtn" class="clear-btn">Fshij të gjitha</button>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
