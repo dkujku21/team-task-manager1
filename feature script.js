@@ -18,4 +18,18 @@ function addTask() {
     `;
 
     const deleteBtn = li.querySelector('.delete-btn');
-    deleteBtn.oncl
+    deleteBtn.onclick = function() {
+        li.remove();
+    };
+
+    taskList.appendChild(li);
+    taskInput.value = "";
+}
+
+addBtn.addEventListener('click', addTask);
+
+taskInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+});
